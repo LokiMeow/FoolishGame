@@ -6,52 +6,116 @@ using System.Threading.Tasks;
 
 namespace CodeFirst
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public class Person
+
+    //Physical = 1,
+    //Magic = 2,
+
+    public class BaseModel
     {
-        public List<Buff> Buffs { get; set; }
+        public Guid ID { get; set; }
     }
 
+    /// <summary>
+    /// 角色属性基类
+    /// </summary>
+    public class BaseProperty : BaseModel
+    {
+        /// <summary>
+        /// 物理伤害
+        /// </summary>
+        public int PhysicalDmg { get; set; }
+
+        public int MagicDmg { get; set; }
+
+        /// <summary>
+        /// 物理防御
+        /// </summary>
+        public int PhysicalDef { get; set; }
+
+        public int MagicDef { get; set; }
+
+        public int HP { get; set; }
+
+        /// <summary>
+        /// 暴击
+        /// </summary>
+        public int Crit { get; set; }
+
+        /// <summary>
+        /// 闪避
+        /// </summary>
+        public int Dodge { get; set; }
+    }
+
+    /// <summary>
+    /// 角色
+    /// </summary>
+    public class Charactor : BaseProperty
+    {
+        public Weapon Weapon { get; set; }
+    }
+
+    /// <summary>
+    /// 武器
+    /// </summary>
+    public class Weapon
+    {
+
+        public AttackType AttackType { get; set; }
+    }
+
+    /// <summary>
+    /// 技能
+    /// </summary>
+    public class Skill
+    {
+        public NumericalType NumericalType { get; set; }
+    }
+
+    /// <summary>
+    /// 药剂
+    /// </summary>
+    public class Medicine { }
+
+    /// <summary>
+    /// 状态
+    /// </summary>
     public class Buff
     {
+        /// <summary>
+        /// BUFF的剩余次数
+        /// </summary>
+        public int Times { get; set; }
+    }
+
+    /// <summary>
+    /// 攻击类型
+    /// </summary>
+    public enum AttackType
+    {
+        近战 = 1,
+        远程 = 2,
+    }
+
+    /// <summary>
+    /// 数值类型
+    /// </summary>
+    public enum NumericalType
+    {
+        数值 = 1,
+        百分比 = 2,
     }
 
     /// <summary>
     /// 伤害类型
     /// </summary>
-    public enum XXType
+    public enum DamageType
     {
-        Physical = 1,
-        Magic = 2,
+        物理 = 1,
+        魔法 = 2,
         /// <summary>
-        /// 纯粹伤害，不受减免
+        /// 不受任何防御减免
         /// </summary>
-        Pure =4,
-    }
-
-    public class aaa
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="AttPerson">攻击发起者</param>
-        /// <param name="DefPerson">被攻击者</param>
-        /// <param name="type">伤害类型</param>
-        public void NormalAttack(Person AttPerson, Person DefPerson, XXType type) {
-        }
-
-        ///// <summary>
-        ///// 大招攻击方法
-        ///// </summary>
-        //public void SuperAttack(Person AttPerson, Person DefPerson, XXType type) {
-        //}
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void XXXBuff() {
-        }
+        纯粹 = 4,
     }
 }
