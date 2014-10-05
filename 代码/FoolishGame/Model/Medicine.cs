@@ -1,7 +1,7 @@
 namespace Model
 {
-	public class Medicine
-	{
-		public NumericalType NumericalType{ get; set; }
-	}
+    public class Medicine
+    {
+        public NumericalType NumericalType { get; set; }
+    }
 }

@@ -1,7 +1,7 @@
 namespace Model
 {
-	public class Skill
-	{
+    public class Skill
+    {
 
-	}
+    }
 }
