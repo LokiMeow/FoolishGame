@@ -1,6 +1,6 @@
 namespace Model
 {
-    public class Buff
+    public class Buff : BaseProperty
     {
         public NumericalType NumericalType { get; set; }
 

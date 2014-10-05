@@ -1,6 +1,6 @@
 namespace Model
 {
-    public class Weapon : Model.BaseProperty
+    public class Weapon : BaseProperty
     {
         public AttackType AttackType { get; set; }
 

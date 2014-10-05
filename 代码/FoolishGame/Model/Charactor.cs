@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Model
 {
-    public class Charactor : Model.BaseProperty
+    public class Charactor : BaseProperty
     {
         /// <summary>
         /// 所持武器
