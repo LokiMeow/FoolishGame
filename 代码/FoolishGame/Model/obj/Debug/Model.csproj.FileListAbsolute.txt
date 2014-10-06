@@ -1,5 +1,4 @@
 D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Model\bin\Debug\Model.dll
 D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Model\bin\Debug\Model.pdb
-D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Model\obj\Debug\Model.dll
 D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Model\obj\Debug\Model.pdb

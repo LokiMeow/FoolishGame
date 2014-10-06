@@ -10,13 +10,13 @@ namespace Service
         /// <summary>
         /// 常规数值攻击
         /// </summary>
-        private Charactor Attack(Charactor attacker, Charactor underAttacker, DamageType type) {
+        private static Charactor Attack(Charactor attacker, Charactor underAttacker, DamageType type) {
             switch (type) {
                 case DamageType.物理:
-                    underAttacker.HP = attacker.PhysicalDmg - underAttacker.PhysicalDef;
+                    underAttacker.HP -= attacker.PhysicalDmg - underAttacker.PhysicalDef;
                     break;
                 case DamageType.魔法:
-                    underAttacker.HP = attacker.MagicDmg - underAttacker.MagicDef;
+                    underAttacker.HP -= attacker.MagicDmg - underAttacker.MagicDef;
                     break;
                 case DamageType.纯粹:
                     underAttacker.HP -= attacker.RealDmg;
@@ -27,7 +27,7 @@ namespace Service
             return underAttacker;
         }
 
-        public List<Charactor> Attack(ref Charactor attacker, List<Charactor> underAttackerList) {
+        public static List<Charactor> Attack(ref Charactor attacker, List<Charactor> underAttackerList) {
             //先对所有目标执行攻击动作
             var result = new List<Charactor>();
             foreach (var underAttacker in underAttackerList) {
@@ -45,6 +45,13 @@ namespace Service
         }
 
         #endregion
+
+        public static Charactor Initialize(Charactor charactor) {
+            var result = WeaponService.UpdateWeapon(charactor);
+            result = MedicineService.UpdateMedicine(result);
+            //差初始化Buff
+            return result;
+        }
 
     }
 }

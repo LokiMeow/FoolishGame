@@ -63,30 +63,30 @@ namespace Service
             where T : BaseProperty
             where T1 : BaseProperty {
             if (isGood) {
-                t.PhysicalDmg *= t1.PhysicalDmg;
-                t.PhysicalDef *= t1.PhysicalDef;
+                t.PhysicalDmg += t.PhysicalDmg * t1.PhysicalDmg;
+                t.PhysicalDef += t.PhysicalDef * t1.PhysicalDef;
 
-                t.MagicDmg *= t1.MagicDmg;
-                t.MagicDef *= t1.MagicDef;
+                t.MagicDmg += t.MagicDmg * t1.MagicDmg;
+                t.MagicDef += t1.MagicDef;
 
-                t.HP *= t1.HP;
-                t.Speed *= t1.Speed;
+                t.HP += t.HP * t1.HP;
+                t.Speed += t.Speed * t1.Speed;
 
-                t.Crit *= t1.Crit;
-                t.Dodge *= t1.Dodge;
+                t.Crit += t.Crit * t1.Crit;
+                t.Dodge += t.Dodge * t1.Dodge;
             }
             else {
-                t.PhysicalDmg /= t1.PhysicalDmg;
-                t.PhysicalDef /= t1.PhysicalDef;
+                t.PhysicalDmg -= t.PhysicalDmg * t1.PhysicalDmg;
+                t.PhysicalDef -= t.PhysicalDef * t1.PhysicalDef;
 
-                t.MagicDmg /= t1.MagicDmg;
-                t.MagicDef /= t1.MagicDef;
+                t.MagicDmg -= t.MagicDmg * t1.MagicDmg;
+                t.MagicDef -= t1.MagicDef;
 
-                t.HP /= t1.HP;
-                t.Speed /= t1.Speed;
+                t.HP -= t.HP * t1.HP;
+                t.Speed -= t.Speed * t1.Speed;
 
-                t.Crit /= t1.Crit;
-                t.Dodge /= t1.Dodge;
+                t.Crit -= t.Crit * t1.Crit;
+                t.Dodge -= t.Dodge * t1.Dodge;
             }
             return t;
         }

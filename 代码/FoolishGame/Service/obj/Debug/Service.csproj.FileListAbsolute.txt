@@ -1,1 +1,7 @@
 D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\bin\Debug\Service.dll
+D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\bin\Debug\Service.pdb
+D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\bin\Debug\Model.dll
+D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\bin\Debug\Model.pdb
+D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\obj\Debug\Service.dll
+D:\Documents\GitHub\FoolishGame\代码\FoolishGame\Service\obj\Debug\Service.pdb
